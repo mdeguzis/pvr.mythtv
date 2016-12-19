@@ -96,7 +96,7 @@ ADDON_STATUS ADDON_Create(void *hdl, void *props)
     return ADDON_STATUS_PERMANENT_FAILURE;
   }
   XBMC->Log(LOG_DEBUG, "Creating MythTV PVR-Client");
-  XBMC->Log(LOG_DEBUG, "Addon compiled with XBMC_PVR_API_VERSION: %s and XBMC_PVR_MIN_API_VERSION: %s", GetPVRAPIVersion(), GetMininumPVRAPIVersion());
+  XBMC->Log(LOG_DEBUG, "Addon compiled with XBMC_PVR_API_VERSION: %s", INSTANCE_VERSION_PVR);
   XBMC->Log(LOG_DEBUG, "Register handle @ libXBMC_addon...done");
   XBMC->Log(LOG_DEBUG, "Checking props...");
   if (!props)
@@ -718,30 +718,6 @@ void ADDON_DestroyInstance(int instanceType, const char* instanceID, void* insta
 /***********************************************************
  * PVR Client AddOn specific public library functions
  ***********************************************************/
-
-const char* GetPVRAPIVersion(void)
-{
-  static const char *strApiVersion = XBMC_PVR_API_VERSION;
-  return strApiVersion;
-}
-
-const char* GetMininumPVRAPIVersion(void)
-{
-  static const char *strMinApiVersion = XBMC_PVR_MIN_API_VERSION;
-  return strMinApiVersion;
-}
-
-const char* GetGUIAPIVersion(void)
-{
-  static const char *strGuiApiVersion = KODI_GUILIB_API_VERSION;
-  return strGuiApiVersion;
-}
-
-const char* GetMininumGUIAPIVersion(void)
-{
-  static const char *strMinGuiApiVersion = KODI_GUILIB_MIN_API_VERSION;
-  return strMinGuiApiVersion;
-}
 
 PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
 {

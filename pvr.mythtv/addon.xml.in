@@ -6,9 +6,8 @@
   provider-name="Christian Fetzer, Jean-Luc Barrière">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="5.2.1"/>
-    <import addon="xbmc.codec" version="1.0.1"/>
-    <import addon="kodi.guilib" version="5.11.0"/>
+    <import addon="xbmc.pvr" version="5.2.2"/>
+    <import addon="kodi.guilib" version="5.11.1"/>
   </requires>
   <extension
     point="xbmc.pvrclient"

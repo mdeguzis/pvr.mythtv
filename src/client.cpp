@@ -719,7 +719,7 @@ void ADDON_DestroyInstance(int instanceType, const char* instanceID, void* insta
  * PVR Client AddOn specific public library functions
  ***********************************************************/
 
-PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
+void GetCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
 {
   if (g_client != NULL)
   {
@@ -739,11 +739,6 @@ PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES *pCapabilities)
     pCapabilities->bSupportsRecordingPlayCount    = (version < 80 ? false : true);
     pCapabilities->bSupportsLastPlayedPosition    = (version < 88 ? false : true);
     pCapabilities->bSupportsRecordingEdl          = true;
-    return PVR_ERROR_NO_ERROR;
-  }
-  else
-  {
-    return PVR_ERROR_FAILED;
   }
 }
 

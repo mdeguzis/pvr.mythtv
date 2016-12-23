@@ -6,11 +6,11 @@
   provider-name="Christian Fetzer, Jean-Luc Barrière">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="xbmc.pvr" version="5.2.3"/>
+    <import addon="kodi.pvr" version="5.2.3"/>
     <import addon="kodi.guilib" version="5.11.1"/>
   </requires>
   <extension
-    point="xbmc.pvrclient"
+    point="kodi.pvrclient"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary lang="af_ZA">Kodi voorprogram vir MythTV</summary>

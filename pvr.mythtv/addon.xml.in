@@ -6,8 +6,8 @@
   provider-name="Christian Fetzer, Jean-Luc Barrière">
   <requires>
     <c-pluff version="0.1"/>
-    <import addon="kodi.pvr" version="5.2.3"/>
-    <import addon="kodi.guilib" version="5.11.1"/>
+    <import addon="kodi.global.gui" version="@ADDON_GLOBAL_VERSION_GUI@"/>
+    <import addon="kodi.instance.pvr" version="@ADDON_INSTANCE_VERSION_PVR@"/>
   </requires>
   <extension
     point="kodi.pvrclient"
